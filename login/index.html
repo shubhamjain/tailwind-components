@@ -1,9 +1,53 @@
 <!DOCTYPE html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Amezmo - Create an account</title>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,500" rel="stylesheet">
+        <link rel="stylesheet" href="../static/style.css" />
+        <title>Log In - Dummy Company</title>
+
+        <style>
+            body {
+                font-family: 'Source Sans Pro', serif;
+            }
+        </style>
     </head>
     <body>
+        <div class="bg-grey-lighter min-h-screen flex flex-col">
+            <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center">
+                <img src="../static/dummy-logo.png" class="mb-4" />
+                <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
+                    <h1 class="mb-8 text-3xl text-center">Log In</h1>
+                    <input 
+                        type="text"
+                        class="block border border-grey-light w-full p-3 rounded mb-5"
+                        name="email"
+                        placeholder="Email" />
 
+                    <input 
+                        type="password"
+                        class="block border border-grey-light w-full p-3 rounded mb-5"
+                        name="password"
+                        placeholder="Password" />
+
+                    <button
+                        type="submit"
+                        class="w-full text-center py-3 rounded bg-green text-white hover:bg-green-dark focus:outline-none my-1"
+                    >Login</button>
+
+                    <div class="text-center text-sm text-grey-dark mt-4">
+                        <a class="no-underline border-b border-blue text-blue" href="#">
+                            Forgot Password?
+                        </a>
+                    </div>
+                </div>
+
+                <div class="text-grey-dark mt-6">
+                    Don't have an account? 
+                    <a class="no-underline border-b border-blue text-blue" href="../signup/">
+                        Sign Up
+                    </a>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

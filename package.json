@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "tailwindcss": "^0.7.4"
+  },
+  "scripts": {
+    "build": "parcel build styles/main.css -o style.css -d static/ --no-source-maps"
   }
 }
