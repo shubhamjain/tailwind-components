@@ -1,6 +1,6 @@
 # Tailwind Registeration Page
 
-Signup and login page made using [TailwindCSS][https://tailwindcss.com/). [Demo](https://stuff.shubhamjain.co/tailwind-registeration-page/signup/).
+Signup and login page made using [TailwindCSS](https://tailwindcss.com/). [Demo](https://stuff.shubhamjain.co/tailwind-registeration-page/signup/).
 
 ## How to compile CSS?
 
