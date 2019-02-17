@@ -1,8 +1,9 @@
-# Tailwind Registeration Page
+# Tailwind Components
 
-Signup and login page made using [TailwindCSS](https://tailwindcss.com/).
+Reusable, good-looking components made using [TailwindCSS](https://tailwindcss.com/).
 
-[Demo](https://stuff.shubhamjain.co/tailwind-registeration-page/signup/).
+[Sign Up Page](https://stuff.shubhamjain.co/tailwind-registeration-page/signup/)
+[Login Page](https://stuff.shubhamjain.co/tailwind-registeration-page/login/)
 
 ## How to compile CSS?
 
