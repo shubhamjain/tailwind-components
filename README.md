@@ -2,8 +2,8 @@
 
 Reusable, good-looking components made using [TailwindCSS](https://tailwindcss.com/).
 
-[Sign Up Page](https://stuff.shubhamjain.co/tailwind-registeration-page/signup/)
-[Login Page](https://stuff.shubhamjain.co/tailwind-registeration-page/login/)
+1. [Sign Up Page](https://stuff.shubhamjain.co/tailwind-components/signup/)
+2. [Login Page](https://stuff.shubhamjain.co/tailwind-components/login/)
 
 ## How to compile CSS?
 
