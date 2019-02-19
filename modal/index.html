@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,500" rel="stylesheet">
+        <link rel="stylesheet" href="../static/style.css" />
+        <title>Sign Up - Dummy Company</title>
+
+        <style>
+            body {
+                font-family: 'Source Sans Pro', serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="lorem-ipsum-modal"
+            class="absolute items-center justify-center p-2 h-screen w-screen fixed hidden"
+            data-modal>
+            <!-- Overlay -->
+            <div class="absolute h-full w-full bg-grey-lighter opacity-75" data-action="close"></div>
+    
+            <div class="w-full max-w-md border border-grey-light rounded shadow bg-white text-black z-10">
+                <div class="px-6 py-5 mb-6 flex justify-between border-b border-grey-light text-2xl font-bold">
+                    <span>Modal Header</span>
+                    <!-- Cross Icon -->
+                    <span class="text-grey cursor-pointer hover:text-grey-darker" data-action="close">
+                        ×
+                    </span>
+                </div>
+
+                <!-- Modal Content -->
+                <div class="px-6 mb-6 leading-normal">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+                <!-- /Modal Content -->
+                
+                <!-- Modal Footer -->
+                <div class="flex justify-end px-6 py-5 bg-grey-lightest border border-t">
+                    <button class="px-4 py-2 bg-green text-white rounded hover:bg-green-dark hover:shadow"
+                        data-action="alert">
+                        Confirm
+                    </button>
+                </div>
+                <!-- /Modal Footer -->
+            </div>
+        </div>
+
+        <button class="px-4 py-2 bg-green text-white rounded hover:bg-green-dark hover:shadow m-3"
+            data-modal-target="lorem-ipsum-modal">
+            Trigger Modal
+        </button>
+
+        <a class="no-underline border-b border-blue text-blue absolute pin-t pin-r m-2"
+           href="https://github.com/shubhamjain/tailwind-components">
+            Source
+        </a>
+
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function () {
+                var triggerBtns = [].slice.call(document.querySelectorAll("[data-modal-target]"));
+                var modalDivs = [].slice.call(document.querySelectorAll("[data-modal]"));
+
+                triggerBtns.forEach (function (btn) {
+                    btn.addEventListener("click", function () {
+                        var targetId = this.getAttribute("data-modal-target");
+                        var targetEl = document.getElementById(targetId);
+    
+                        targetEl.classList.remove("hidden");
+                        targetEl.classList.add("flex");
+                    });
+                });
+
+                modalDivs.forEach (function (modalDiv) {
+                    modalDiv.addEventListener("click", function (ev) {
+                        var action = ev.target.getAttribute("data-action");
+    
+                        if (action === "close") {
+                            this.classList.add("hidden");
+                            this.classList.remove("flex");
+                        }
+
+                        // You can have the custom action on the trigger button
+                        if (action === "alert") {
+                            window.alert("Confirm was clicked");
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
