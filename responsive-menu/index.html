@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>Responsive Menu — Tailwind Components</title>
+
+    <style>
+        body {
+            font-family: 'Source Sans Pro', serif;
+        }
+
+        .right--300 {
+            right: -300px;
+        }
+
+        .transition-right {
+            transition: right 250ms;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mx-auto max-w-md text-black">
+        <div class="flex items-center justify-between mx-4 my-4 pb-4 border-b border-grey-light">
+            <div class="w-1/2 font-bold text-2xl">
+                Company, Inc
+            </div>
+            <div>
+                <div class="hidden md:block font-bold">
+                    <a href="." class="mr-4 no-underline text-blue hover:text-blue-dark">Home</a>
+                    <a href="." class="mr-4 no-underline text-blue hover:text-blue-dark">Work</a>
+                    <a href="." class="mr-4 no-underline text-blue hover:text-blue-dark">Contact Me</a>
+                </div>
+                <div class="md:hidden" id="nav-ham-icon">
+                    <svg height="32px" viewBox="0 0 32 32" width="32px" class="fill-current">
+                        <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="pin-r pin-t absolute h-full w-full bg-grey-lighter opacity-75 z-10 hidden" id="nav-overlay"></div>
+            <div class="fixed pin-y pin-r w-64 transition-right bg-white border-l z-20 right--300" id="nav-menu">
+                <span class="absolute pin-t pin-r m-4 text-4xl text-grey" id="nav-cross-icon">×</span>
+                <div class="pl-4 pt-6 text-2xl">
+                    <div class="mt-5">
+                        <a href="." class="text-black no-underline lowercase">Home</a>
+                    </div>
+                    <div class="mt-5">
+                        <a href="." class="text-black no-underline lowercase">Work</a>
+                    </div>
+                    <div class="mt-5">
+                        <a href="." class="text-black no-underline lowercase">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener ("DOMContentLoaded", function () {
+            var menuIcon = document.querySelector("#nav-ham-icon");
+            var navOverlay = document.querySelector("#nav-overlay");
+            var navMenu = document.querySelector("#nav-menu");
+            var navCross = document.querySelector("#nav-cross-icon");
+
+            menuIcon.addEventListener ("click", function () {
+                navMenu.classList.remove("right--300");
+                navOverlay.classList.remove("hidden");
+            });
+
+            navCross.addEventListener ("click", function () {
+                navMenu.classList.add("right--300");
+                navOverlay.classList.add("hidden");
+            });
+        });
+    </script>
+</body>
+</html>

@@ -4,7 +4,8 @@ Reusable, good-looking components made using [TailwindCSS](https://tailwindcss.c
 
 1. [Sign Up Page](https://stuff.shubhamjain.co/tailwind-components/signup/)
 2. [Login Page](https://stuff.shubhamjain.co/tailwind-components/login/)
-2. [Modal](https://stuff.shubhamjain.co/tailwind-components/modal/)
+3. [Modal](https://stuff.shubhamjain.co/tailwind-components/modal/)
+4. [Responsive Menu](https://stuff.shubhamjain.co/tailwind-components/responsive-menu/)
 
 ## How to compile CSS?
 
